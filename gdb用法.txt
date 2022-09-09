@@ -1,0 +1,105 @@
+﻿linux下gdb的常用用法如下：(在用gdb调试之前，记得在Makefile的g++中加入了-g选项)
+
+1、进入gdb环境
+   gdb exename
+
+2、显示当前所处位置的文件内容
+   list
+
+3、设置断点
+   break/b 行号
+
+4、显示断点信息
+   info break
+
+5、撤消断点
+   delete breakpoint 1 
+   该命令将会删除编号为1的断点，如果不带编号参数，将删除所有的断点 
+   delete breakpoint  
+
+6、单步执行
+   next/n
+
+7、进入函数体内部跟踪
+   step
+
+8、退出函数体
+   finish
+
+9、显示变量或者函数的值
+   print/p 变量名/函数名
+
+10、开始调试
+    run
+
+11、跳至下一断点
+    continue/c
+
+12、重复上一指令
+    直接回车
+
+13、退出gdb环境
+    quit 
+
+14、在可执行程序外的程序文件中设置断点
+    可在Makefile的CXXFLAGS中加上--ggdb -O0，以产生调试信息并关闭优化。
+    然后再调试可执行程序的时候在被用到的cpp文件中设置断点，例如：
+    gdb sform2
+    ......
+    ......
+    break ncl_radiobox.cpp:57  其中57是行号  
+
+15、查看程序出错的地方
+    where
+
+16、Call Stack
+    bt
+
+17、directory          设置 Source文件路径，有了Source文件才可以调试程序原码
+
+18、x                        察看内存      x  &iRtn   察看变量iRtn的内存情况 
+
+19、给变量赋值
+    set variable 将值赋予变量 
+    set variable snooze=false
+
+20、info threads
+    显示当前可调试的所有线程，每个线程会有一个GDB为其分配的ID，后面操作线程的时候会用到这个ID。
+    前面有*的是当前调试的线程。
+
+21、thread ID
+    切换当前调试的线程为指定ID的线程。 
+
+22、设置运行参数
+    比如，先运行gdb mplayer
+    然后输入set args xxx.avi
+
+23、多进程调试
+    set follow-fork-mode [parent|child]
+    用ps和pstree查看进程间关系
+    attach [pid] 
+
+24、监视变量被修改
+当你调试一个很大的程序，并且在跟踪一个关键的变量时，发现这个变量不知在哪儿被改动过，如何才能找到改动它的地方。这时你可以使用watch命令。简单地说，监视点可以让你监视某个表达式或变量，当它被读或被写时让程序断下。watch命令的用法如下：
+　　　watch EXPRESSION
+　　watch指令是监视被写的，当你想监视某个表达式或变量被读的话，需要使用rwatch指令，具体用法是一样的。要注意的是，监视点有硬件和软件两种方式，如果可能Linux尽可能用硬件方式，因为硬件方式在速度上要大大快于软件方式。软件方式由于要在每次执行一条指令后都要检查所要监视的值是否被改变，因此它的执行速度会大大降低。同时它也无法设置成被读时让程序断下，因为读操作不会改变值，所以GDB无法检测到读操作。幸运的是，目前的PC机基本都支持硬件方式。如果你想确认一下你的机器是否支持硬件，你可以在调试程序时用watch设置一个监视点，如果GDB向你显示：
+　　　Hardware watchpoint NUM: EXPR
+　　那么你可以放心了，你的机器支持硬件方式。 
+
+
+用法：
+#gdb 程序名
+#(gdb)  r(un)                   运行程序
+#(gdb)  b(reak)                设置断点   例 b main, [main函数]   b xxxx.cpp:123  文件xxxx.cpp的第123行
+#(gdb)  c(ontinue)          相当于VC F5
+# (gdb)  s(tep)                相当于VC F11
+# (gdb)  n(ext)                相当于VC F10
+# (gdb)  display             一次察看变量            display iRtn 
+# (gdb)  p(rint)               一直打印变量                   p  iRtn
+# (gdb)  frame                VC里的CallStack                 
+# (gdb)  q                       退出gdb
+# (gdb)  directory          设置 Source文件路径，有了Source文件才可以调试程序原码
+#(gdb)  x                        察看内存      x  &iRtn   察看变量iRtn的内存情况  
+#(gdb) help
+#(gdb) backstrace        Print backtrace of all stack frames
+
