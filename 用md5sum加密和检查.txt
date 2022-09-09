@@ -1,0 +1,13 @@
+﻿比如说需要对test.txt加密
+
+使用命令：
+
+md5sum test.txt > test.txt.md5
+
+则test.txt.md5就是test.txt的加密文件。
+
+可以用如下命令进行check：
+
+md5sum -c test.txt.md5
+
+如果test.txt没有改变，则输出OK，否则输出failed。
