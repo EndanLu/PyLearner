@@ -1,0 +1,416 @@
+﻿常用linux指令
+
+-6、递归删除当前目录及子目录下的文件
+    find -iname '.svn' -exec rm -rf {} \;
+
+-5、apt-get和dpkg
+    apt-get update                         根据/etc/apt/sources.list上网更新本地列表；
+    apt-get install libgtkmm-2.4-dev       安装libgtkmm-2.4-dev包；
+    apt-get remove libgtkmm-2.4-dev        移除libgtkmm-2.4-dev包；
+    dpkg -i libgtkmm-2.4.deb               安装当前目录下的libgtkmm-2.4.deb包。
+
+-4、alias
+        打印当前使用的别名
+        也可以用 alias name=value 来实现别名定义。
+        比如alias pig='cd ..'，就可以用敲pig来实现cd ..
+
+-3、dmesg
+    print or control the kernel ring buffer
+    当程序崩溃或出错时，经常可以用此命令来获得底层信息。
+
+-2、strace
+    追踪系统调用和singals。另外还有ptrace和mtrace的函数调用。
+    调试程序时非常有用，网上也有开源代码。
+
+-1、文件属性共有十位，第一位表示是文件、目录、还是链接或者其它；接下来以三位为一个单位，分别表示owner、group member、everyone的权限。
+
+0、关机、重启
+   poweroff      关机
+   shutdown -h 0  
+
+   reboot        重启
+   shutdown -r 0
+
+1、编译cpp程序
+   g++ -c main.cpp dan3.cpp
+   生成可执行文件
+   g++ -o main main.o dan3.o
+
+2、文件编辑环境
+   vi或者vim
+   按i键进入insert状态进行编辑，编辑结束后按esc退出，按：准备退出，q退出，wq写退出，q！强制退出。
+
+其它参见《vi的用法》
+
+
+3、生成链接文件
+   ln -s lued prog
+
+4、访问windows下fat32分区
+   mount -t vfat /dev/hda6 /mnt/windows/    如果是U盘，则是/dev/sda（或者/dev/sda1）。如果是光盘，则是/dev/cdrom
+   cd /mnt/windows/
+   ......
+   umount /mnt/windows
+
+5、获取cvs版本
+   cvs login
+   cvs co SDEC03-005  // checkout的意思
+
+6、分屏查看当前目录文件
+   ls -l|less
+   ls -lh
+
+7、把某个目录下所有文件均拷贝至另一目录下
+   cp -a daniel/  dd/
+   cp -r 和 cp -R是不一样的，后者会把特殊文件也进行拷贝。
+
+8、删除整个目录并且不出现提示符
+   rm -f -r daniel/
+
+9、查找当前目录及子目录下的cpp文件
+   find -name "*.cpp"
+
+10、更名或移动文件
+   mv aaa bbb
+   mv *.c /mnt/
+
+11、重定向、连接或重写
+   cat ee.txt ee2.txt > ee3.txt
+   （连接ee、ee2，存入ee3）
+   cat ee.txt >> ee2.txt
+   （把ee放在ee2之后存入ee2）
+
+12、查看文件属性
+   file 文件名
+
+13、压缩解压缩文件
+
+   tar -cjvf filename.tar.bz filename
+   tar -xjvf filename.tar.bz
+
+   tar -czvf filename.tar.gz filename
+   tar -xzvf filename.tar.gz
+
+14、升级到root用户
+    su
+    退回到原来用户
+    exit
+
+15、将程序运行结果输出到文件中去
+   例如 ./main > tt.txt
+   就将main程序的运行结果输出到tt.txt文件中去，这样有助于分析程序错误
+
+16、新建子目录
+   mkdir，如果是需要创建多级目录，加 -p
+
+17、查看内存泄漏
+   使用memprof，mtrace，或者njamd
+
+18、查找文件
+   find *.cpp              当前目录下的cpp文件
+   find -name '*.cpp'      当前目录及子目录下的cpp文件，-iname忽略大小写
+   find /etc -name '*abc*'       在/etc目录下查找含abc字符串的文件       
+
+19、终止程序
+   killall -9 nsgserver    终止nsgserver
+
+20、查询函数或者库
+   man functionname
+   例如 man pthread_create
+   还有一些同名调用，比如kill，既可以在console下调用kill，也可以在程序中调用kill，普通
+   man kill的时候给出的是console下调用kill的解释，如果需要查看程序中调用kill的解释，则
+   man 2 kill
+   依次可有man n functionname
+
+   info libc
+   可以查看整个C库的文档（可以查到一些系统定义的struct信息等等）
+
+21、更新文件树（需用root登录）
+    updatedb
+
+22、查找文件（更新文件树后）
+    locate filename
+
+23、显示当前系统限制
+    ulimit -a   
+
+24、只显示目录
+    ls -p | grep /
+    ls -l          显示全信息
+    ls -t          按时间排序
+    ls -S          按文件大小排序
+    ls -h          以人性化方式显示文件大小，即显示K、M、G等
+
+25、显示系统信息
+    uname -a
+
+26、修改文件属性
+    chmod +x filename  给filename增加可执行属性
+    chmod -x filename  去除filename的可执行属性
+
+    chmod 777 dirname -R 给dirname及以下各级均加上r、w、x属性。
+   （因为文件属性共十位，前一位表示文件属性，后面三位三位依次表示owner、group、everyone的r、w、x属性，7就是二进制111，
+    所以777就相当于把所有属性均加上。）
+
+27、自动缩排程序文件
+    indent filename.c
+
+28、显示CPU processes （可以监视进程情况，观察内存泄漏等）
+    top
+
+29、显示内存使用情况
+    free
+
+30、把内存监视结果存入日志
+    watch 'free >> mem.log'
+
+31、使用隐藏文件（文件名前面加个.就可以）
+    .filename
+    查看隐藏文件可以用ls -a
+
+32、在Console界面下如何得知文件夹大小（不过不是很精确，还是在图形界面下右键看property比较好）
+    df -h
+
+33、Console界面和X Windows界面的切换
+    Ctrl+Alt+F1～F6
+    从X Windows切换到Console界面
+    Ctrl+Alt+F7
+    从Console界面切换到X Windows 
+    如果启动时进的是Console，可以用startx启动X Windows，然后再用Ctrl+Alt+FX切换 
+    如果遇到死机，还可以用Ctrl+Alt+Backspace退回Console界面。
+
+34.安装一个包 
+   rpm -ivh *.rpm
+   升级一个包 
+   rpm -Uvh *.rpm
+   移走一个包 
+   rpm -e pkg1
+
+35、更换桌面（gNome、KDE等）
+    switchdesk 
+
+36、查询环境设置
+    $QTDIR   可以查看当前Qt库安装目录
+    $CVSROOT 可以查看当前cvs路径设置
+    也可以在当前用户目录~下查看相应profile或者rc文件
+
+37、程序性能分析
+    参见《用gprof进行程序性能分析》
+
+38、查看历史操作
+    history
+    history n
+
+39、修改启动设置（譬如启动默认进入Console界面或者X Windows界面）
+    修改/etc/inittab，
+    id:3:initdefault:    表示默认进入Console界面
+    id:5:initdefault:    表示默认进入X Windows界面
+
+40、配置设置
+    Console界面下输入setup，进入相关设置。
+    比如说需要配置网络，则进入setup配置完毕后，输入ifdown eth0，再输入ifup eth0启动网络即可。
+    （用Space进行0、1切换）
+
+    如果是专门配置网络，可以用netconfig指令，实际上是修改的/etc/sysconfig/network-script/ifcfg-eth0这个脚本。
+    修改完了，同样需要ifdown eth0，再输入ifup eth0。
+
+    ifconfig查看。
+
+
+41、查看日期和时间
+    date
+
+42、查看、卸载、加载usb-storage模块
+    lsmod
+    rmmod usb-storage
+    modprobe usb-storage
+
+43、终止程序，让程序在后台执行
+    Ctrl＋C  终止程序
+    Ctrl＋Z  让程序在后台执行
+
+44、改变owner、group
+    chown ownername filename
+    chown ownername dirname -R
+
+    chgrp grpname   filename
+    chgrp grpname   dirname -R
+
+45、搜索文件内容
+    grep 'content' file   在文件file中搜索content字符串，可以用 -n 显示行号
+    grep 'content' *      搜索当前目录下所有文件中是否有content字样
+    grep -i 'content' *   搜索当前目录下所有文件中是否有content字样（不区分大小写）
+    grep 'content' * -R   搜索当前目录及子目录下所有文件中是否有content字样
+    grep 'A.*B'    *      搜索当前目录下所有文件中是否有A...B字样，参见man grep正则表达式
+
+46、通过inode（index node）获得文件的相关信息
+    stat filename
+
+47、观察上一条指令执行结果正确与否
+    $?
+    返回0表示正确
+
+48、图形化file浏览器
+    mc，退出F10
+
+49、匹配上面几条指令中的任何一条
+    例如 !grep 就可以匹配前面以grep开头的指令
+
+50、如何把网络服务器上某个目录映射到本地目录？
+
+    用setup启动服务器的NFS服务。
+    先在服务器上的/etc/exports文件中加入/sharefolder *(rw,no_root_squash,no_all_squash)，其中/sharefolder是服务器上准备被映射的目录。
+    service portmap restart
+    service nfs restart
+
+    使用时，本地机器mount 192.168.0.150:/sharefolder /mnt/server/，这样就把服务器上的/sharefolder目录映射到本地的/mnt/server目录，使用完后unmount。
+
+如果出现permission denied，查看/var/log/messages，如果是"no DNS forward lookup"，则修改/etc/hosts，在其中增加需要连接server的client端地址，比如添加一行192.168.0.150      Daniel_Workstation， 然后重新启动portmap和nfs即可。
+
+51、查看进程情况
+    ps -aux
+    pstree 
+
+52、查看环境变量
+    export
+
+53、Console界面下往上翻页
+    Shift + PgUp
+
+54、Console界面下显示乱码
+    export LC_ALL=C
+
+55、远程登录
+    ssh -l username hostname
+
+56、查看系统分区状况
+    fdisk -l
+
+57、比较两个文件的不同
+    diff -c file1 file2
+
+58、ftp的使用示例
+    client端默认启动ftp服务，server端默认不启动。
+    
+    server端:
+    console界面下输入setup启动vsftpd服务。
+    man vsftpd，知晓配置文件为vsftpd.conf。
+    find /etc -iname vsftpd.conf，修改相应配置（比如允许匿名登录等等）。
+    service vsftpd restart
+    
+    client端:
+    ftp 192.168.0.254
+    输入用户名，密码
+    put file    (如果是上传多个文件用mput *.cpp)
+    get file    (如果是下载多个文件用mget *.cpp)
+    quit或bye
+
+    client端也可以用lftp来连接server端：
+    lftp -u daniel 192.168.0.254
+    输入密码
+    put file            (如果是上传多个文件用mput *.cpp)
+    get file            (如果是下载多个文件用mget *.cpp)
+    mirror dirname      (直接递归下载目录，爽)
+    mirror -R dirname   (直接递归上传目录，爽)
+    quit或bye
+
+59、新增用户，设置密码
+    先用root登录
+    useradd guest       新增guest用户
+    passwd  guest       为guest设置密码
+    ......
+    
+
+60、让系统启动时自行进行我们需要的操作
+    可以修改/etc/rc.d/rc.local
+
+61、写批处理文件
+    touch sample.sh
+    chmod 777 sample.sh
+    // 在sample.sh中写入需要进行的操作
+    ./sample.sh
+
+62、启动、关闭某种service
+    service smb stop
+    service smb start
+
+63、查看系统运行的结果
+    /var/log/messages
+
+
+64、配置samba服务
+    console界面下setup，启动smb服务
+    修改/samba/smb.conf
+    比如
+	[smb_public]                   <--对外呈现目录名
+	   path = /share/smb_public    <--实际本地目录名
+	   public = yes
+	   only guest = yes
+	   writable = yes
+	   printable = no
+
+	[smb_chunhao]                  <--对外呈现目录名
+	   path = /share/smb_chunhao   <--实际本地目录名
+	   valid users = chunhao
+	   public = no
+	   writable = yes
+	   printable = no
+
+    smb_public是为所有人指定的目录，所有人都可以访问。
+    smb_chunhao是为了用户chunhao指定的目录，仅有chunhao可以访问。
+    当然先需要adduser chunhao, passwd，smbadduser chunhao:chunhao
+    把共享的目录/share/smb_public，/share/smb_chunhao用chmod -R 777 dirname
+
+    再service smb restart
+    服务器端OK
+
+    Linux客户端访问
+    可以先用smbclient -L 192.168.0.150来查看192.168.0.150开放了多少smb目录
+    然后mount -t smbfs -ousername=chunhao //192.168.0.150/smb_chunhao /mnt/chunhao/
+    
+    Windows客户端访问
+    直接输入//192.168.0.150/smb_chunhao
+
+注意：如果外界联系不上，可以尝试在setup中把防火墙关掉。
+
+65、如何修改启动时默认进windows还是linux
+    修改/etc/grub.conf
+
+66、把界面上的输出输入到文件，包括标准输出和错误输出。
+    比如要把make的结果，输出到warning.txt中。
+    make > warning.txt 2>&1
+
+67、cut -b colnum file: 指定欲显示的文件内容范围，并将它们输出到标准输出设备比如：输出每行第5个到第9个字符cut -b5-9 file.txt
+
+68、sed: Sed是一个基本的查找替换程序。可以从标准输入（比如命令管道）读入文本，并将结果输出到标准输出（屏幕）。该命令采用正则表达式（见参考）进行搜索。不要和shell中的通配符相混淆。
+
+    比如：将linuxfocus 替换为 LinuxFocus ：
+    cat text.file | sed 's/linuxfocus/LinuxFocus/' > newtext.file
+
+69、head file， 打印文本文件开头几行
+　　tail file， 打印文本文件末尾几行
+
+
+70、计算文件行数，单词数，字符数
+    wc –l file
+    wc -w file
+    wc -c file
+
+71、awk: awk 用来从文本文件中提取字段。缺省地，字段分割符是空格，可以使用-F指定其他分割符。cat file.txt | awk -F, '{print $1 "," $3 }'这里我们使用，作为字段分割符，同时打印第一个和第三个字段。如果该文件内容如下： Adam Bor, 34, IndiaKerry Miller, 22, USA命令输出结果为：Adam Bor, IndiaKerry Miller
+
+比如自动缩进当前目录下所有cpp文件，就可以用如下命令：
+
+indent `ll | awk '/.cpp/{print $8}'` -kr
+
+
+    
+    
+    
+
+
+
+
+
+
+
+

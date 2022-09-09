@@ -1,0 +1,154 @@
+﻿vi或者vim
+   按i键进入Insert模式进行编辑，按R键进入Replace模式进行编辑，编辑结束后按esc退出，按：准备退出，q退出，wq写退出，q！强制退出，wq!强制写退出。
+
+
+移动：
+gf     跳到对应文件
+0      跳到行首
+$      跳到行尾
+H      跳到当前屏首
+M      跳到当前屏中间位置的行首
+L      跳到当前屏尾
+[{     跳到光标所在代码块首，代码块以{}区分 
+]}     跳到光标所在代码块尾，代码块以{}区分
+[[     跳到最外层的{，通常是函数边界
+]]     跳到最外层的}，通常是函数边界
+20G    跳到第20行
+gg     跳到文档首行
+G      跳到文档尾行
+w      向后跃进一个单词
+b      向前跃进一个单词
+
+自动缩进：
+先按v进入可视模式，选择需要调整缩进的多行，然后按=号即可。
+       
+
+在文件内或者文件间跳转，有时候需要返回上次光标所在位置：
+ctrl-o    命令跳转到以前的位置
+ctrl-i    命令跳转到新的位置。
+
+
+查找：
+/abc            向下查找abc
+?abc            向上查找abc
+n               重复查找
+N               反向重复查找
+*               向下搜索当前词
+#               向上搜索当前词
+%               查找与光标所在处相匹配的反括号, 包括 () [] {} /* */
+gd              当前词的局部变量定义（grep definition，不一定精确）
+gD              当前词的全局变量定义（grep Definition，不一定精确）
+:%s/aa/bb/g     将文档中出现的所有aa 替换为 bb
+:s/aa/bb/g      把当前行中，aa 替换为 bb
+:n1,n2s/aa/bb/g 把从n1行到n2行中，所有aa 替换为 bb
+''              返回指令。此命令相当有用, 它移动光标到上一个标记处, 比如用 gd, * 等查找到                 某个单词后, 再输入此命令则回到上次停留的位置。（在文件间不行，在文件间应                  当使用Ctrl-o和Ctrl-i进行切换）
+                
+
+
+拷贝粘贴：
+dw     剪切当前单词
+dd     剪切整行
+d20G   剪切当前行到20行的内容
+3dd    剪切包括当前行在内的3行
+yw     拷贝当前单词
+yy     拷贝整行
+y20G   拷贝当前行到20行的内容
+3yy    拷贝包括当前行在内的3行
+p      粘贴
+（用可视模式更简单，按v进入可视模式，而后选中某一块内容，按y复制，按d剪切，按p粘贴）
+
+
+快速补齐：
+Ctrl-n        在编辑模式中, 输入几个字符后再输入此命令则 vi 开始向上(下)搜
+              索开头与其匹配的单词并补齐, 不断输入此命令则循环查找。此命令
+              会在所有在这个 vim 程序中打开的文件中进行匹配。
+
+
+
+多窗口：
+:edit  [filename]     在现有窗口中再打开另外一个文件。
+:new   [filename]     在现有窗口外再开一个窗口编辑filename
+Ctrl-w w              切换窗口
+ctrl-w =              所有窗口等高、宽
+ctrl-w +              增加当前窗口高度
+ctrl-w -              减少当前窗口高度
+
+vi file1 file2 file3
+:buffers              此命令查看本 vim 程序已经打开了多少个文件（标有%a的就是当前文件，标有#的是前一个编辑文件）
+:buffer 序号(代号)    此命令将指定序号(代号)的文件在本窗口打开, 其中的序号(代号)
+                      就是用 :ls 命令看到的.
+file                  显示当前文件相关信息
+
+
+
+重复/恢复：
+.      重复上一条指令
+u      撤销上一次操作
+
+
+标签：
+m{a-z}                             设置bookmark，以后只要按'a-z就可以跳到该bookmark
+
+
+个性设置：
+:set ic                            查找时不考虑大小写 
+:set noic                          查找时考虑大小写
+:set number                        显示行号 
+:set nonumber                      不显示行号
+:set syntax=ON  或 :syntax on      颜色区分syntax
+:set syntax=OFF 或 :syntax off     关闭颜色区分
+:set ai                            设置自动缩进
+:set shiftwidth=4                  设置自动缩进为4个空格（默认为8） 
+:set sts=4                         即设置 softtabstop 为 4. 输入 tab 后就跳了 4 格.
+:set tabstop=4                     实际的 tab 即为 4 个空格, 而不是缺省的 8 个.
+:set hlsearch                      设置被搜索字符串高亮显示
+（个性配置也可以直接写在 ~/.vimrc中，这样vim启动时自动读取该文件进行设置，不过写在~/.vimrc中时可以不加前面的:。）
+
+
+加密：
+:X
+
+
+切换到shell
+:shell    不离开vim和当前终端，新开一个shell，用exit返回vi界面。
+:!cmd     直接执行cmd命令
+
+
+帮助：
+:h
+
+
+有力工具ctags（主要是建立各个函数的Tag，方便查看函数定义）：
+ctags -R `find . -iname '*.cpp'`  建立tags。
+ctags -R
+ctrl-]                            查看当前所调函数的定义，可以再用Ctrl-o返回。
+ctrl-w ]                          新开窗口查看当前所调函数的定义。
+
+
+函数列表插件taglist
+安装方法请参考http://www.vim.org/scripts/script.php?script_id=273
+使用时，用"TlistToggle"来开关函数列表；用Ctrl-w w来切换窗口。
+使用taglist时，可以在~/.vimrc中加入：
+let Tlist_File_Fold_Auto_Close=1
+让当前不被编辑的文件的方法列表自动折叠起来， 这样可以节约一些屏幕空间
+let Tlist_WinWidth=40
+可以设置Tlist的window宽度
+nnoremap <silent> <F8> :TlistToggle<CR> 
+nnoremap <silent> <F9> :TlistUpdate<CR> 
+
+
+
+
+编译：
+:make        进行编译
+:cc [num]    显示第num个完整的错误消息。
+:cn          下一个错误
+:cp          上一个错误使用命令
+:clist       列出整个错误列表（一定要在vim中:make之后使用）
+
+
+
+
+
+
+
