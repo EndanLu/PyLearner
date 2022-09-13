@@ -1,1 +1,3 @@
-Namo SatoNam, SamiaoSanputuo.
+Namosatonam, Samiaosanputuo.
+Juzhina, dazatuo.
+Om, Zheli, Zhuli, Zhunti, Suoha.
