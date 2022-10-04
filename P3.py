@@ -1,4 +1,4 @@
 #!/usr/bin/python3
 
 print("Hello, World!")
-print('Just Catch')
+print('Just Watch')
