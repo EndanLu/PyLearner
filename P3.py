@@ -1,9 +1,14 @@
 #!/usr/bin/python3
+from typing import List
 
-print("Reopen the world")
-print("Just step-in again")
+print('Reopen the world')
+print('Just step-in again')
 
 if True:
-    print("True")
+    print('False')
 else:
-    print("False")
+    print('True')
+
+
+total: list[str] = ['item 1', 'item 2', 'item 3']
+print(total)
