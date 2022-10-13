@@ -20,11 +20,14 @@ ListTiny = ['item tiny 1', 'item tiny 2']
 ListAll += ListTiny
 print(ListAll)
 
+ListAll[2] = ''     # Change list item.
+print(ListAll)
+
 print('Daniel \nLu')
 print(r'Daniel \nLu')   # r means the original string.
 
 print('================Python import mode==========================')
-print ('命令行参数为:')
+print('命令行参数为:')
 for i in sys.argv:
     print (i)
 
