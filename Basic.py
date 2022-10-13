@@ -15,6 +15,10 @@ def testBasic():
     else:
         print('Statement is False')
 
+    print('Daniel \nLu')
+    print(r'Daniel \nLu')  # r means the original string.
+
+def testListAndTuple():
 
     ListAll: list[str] = ['item 1', 'item 2', 'item 3']   # Add type hint for total.
     ListTiny = ['item tiny 1', 'item tiny 2']
@@ -24,5 +28,4 @@ def testBasic():
     ListAll[2] = ''     # Change list item.
     print(ListAll)
 
-    print('Daniel \nLu')
-    print(r'Daniel \nLu')   # r means the original string.
+
