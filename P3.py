@@ -9,17 +9,20 @@ print(b, type(b))
 print(c, type(c))
 print(d, type(d))
 
-if True:
-    print('False')
+if type(c) == bool:
+    print('Statement is True')
 else:
-    print('True')
+    print('Statement is False')
 
 
 total: list[str] = ['item 1', 'item 2', 'item 3']   # Add type hint for total.
 print(total)
 
+print('Daniel \nLu')
+print(r'Daniel \nLu')   # r means the original string.
+
 print('================Python import mode==========================')
 print ('命令行参数为:')
 for i in sys.argv:
     print (i)
-#print ('\n python 路径为',sys.path)
+
