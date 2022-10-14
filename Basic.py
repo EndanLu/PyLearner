@@ -18,17 +18,27 @@ def testBasic():
     print('Daniel \nLu')
     print(r'Daniel \nLu')  # r means the original string.
 
-def testListAndTuple():
-
+def testList():
     ListAll: list[str] = ['item 1', 'item 2', 'item 3']   # Add type hint for total.
-    ListTiny = ['item tiny 1', 'item tiny 2']
+    ListTiny = ['item tiny 1', 'item tiny 2'];  # Change list item
     ListAll += ListTiny
     print(ListAll)
 
     ListAll[2] = ''     # Change list item.
     print(ListAll)
 
+def testTuple():
     TupleAll = ('windows', 123, 2.23, 'linux', 3+4j)
     print(TupleAll)
+
+    #TupleAll[1] = 40;   # To change tuple item is illegal.
+
+def testSet():
+    SetAll = {'Google', 'TMall', 'Apple', 'Tencent', 'Facebook', 'Baidu'}
+    mark = 'Tencent';
+    if mark in SetAll:
+        print(mark + ' is in set')
+    else:
+        print(mark + ' is NOT in set')
 
 
