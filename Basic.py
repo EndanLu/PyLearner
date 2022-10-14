@@ -28,4 +28,7 @@ def testListAndTuple():
     ListAll[2] = ''     # Change list item.
     print(ListAll)
 
+    TupleAll = ('windows', 123, 2.23, 'linux', 3+4j)
+    print(TupleAll)
+
 
