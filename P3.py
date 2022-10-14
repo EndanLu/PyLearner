@@ -16,4 +16,5 @@ if __name__ == "__main__":
     testList();
     testTuple();
     testSet();
-    testDictionary()
+    testDictionary();
+    testTypeConversion();
