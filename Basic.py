@@ -49,6 +49,15 @@ def testList():
     listAll[2] = ''  # Change list item.
     print(listAll)
 
+    # List推导式
+    names = ['Bob', 'Tom', 'Alice', 'Jerry', 'Wendy', 'Jocelyn']
+    new_names = [name.upper() for name in names if len(name) > 3]
+    print(new_names)
+
+    # 计算30以内的被3整除的数
+    multiples = [i for i in range(30) if i % 3 == 0]
+    print(multiples)
+
 
 def testTuple():
     tupleAll = ('windows', 123, 2.23, 'linux', 3 + 4j)
