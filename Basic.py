@@ -54,7 +54,7 @@ def testTuple():
     tupleAll = ('windows', 123, 2.23, 'linux', 3 + 4j)
     print(tupleAll)
 
-    # tupleAll[1] = 40;   # To change tuple item is illegal.
+    # tupleAll[1] = 40;   # Changing tuple item is illegal.
 
 
 def testSet():
