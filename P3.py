@@ -13,8 +13,10 @@ if __name__ == "__main__":
     rw = reverseWords(input)
     print(rw)
 
-    testList();
-    testTuple();
-    testSet();
-    testDictionary();
-    testTypeConversion();
+    #testList();
+    #testTuple();
+    #testSet();
+    #testDictionary();
+    #testTypeConversion();
+
+    AverageCalc();

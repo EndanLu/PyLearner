@@ -17,3 +17,14 @@ def reverseWords(input):
     output = ' '.join(inputWords)
 
     return output
+
+
+def AverageCalc():
+    a = [['2018102','小花','女',19,'英语'],['2018306','小莲','女',18,'数学']];
+
+    total = 0.0;
+
+    for i in a:
+        total = total + i[3]
+
+    print('Average == ', total/len(a))
