@@ -28,3 +28,10 @@ def AverageCalc():
         total = total + i[3]
 
     print('Average == ', total/len(a))
+
+    # 计算平均成绩
+    scores = [85, 92, 78, 90, 88]
+    average_score = sum(scores) / len(scores)
+    print("平均成绩为：", average_score)
+
+
