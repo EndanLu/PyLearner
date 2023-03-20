@@ -94,3 +94,22 @@ def testDictionary():
     print(dictAll)
     print(dictAll.keys())
     print(dictAll.values())
+
+def TestRange():
+    for x in range(3):
+        print(x);
+    print('--------------------');
+
+    for x in range(3,7):
+        print(x);
+    print('--------------------');
+
+    for x in range(5,50,10):
+        print(x);
+    else:
+        print('Finished Printing');
+
+    # 计算平均成绩
+#    scores = [85, 92, 78, 90, 88]
+#    average_score = sum(scores) / len(scores)
+#    print("平均成绩为：", average_score)

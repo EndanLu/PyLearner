@@ -3,7 +3,7 @@ from typing import List
 import sys
 from FuncCollection import *
 from Basic import *
-from Snake2 import *
+from Snake import *
 
 if __name__ == "__main__":
     print('命令行参数为:')
@@ -21,4 +21,4 @@ if __name__ == "__main__":
     #testTypeConversion();
 
     AverageCalc();
-    #Snake();
+    TestRange();
