@@ -19,6 +19,15 @@ def testBasic():
     print('Daniel \nLu')
     print(r'Daniel \nLu')  # r means the original string.
 
+def testIfElse():
+    a = 200
+    b = 66
+    if b > a:
+        print("b is greater than a")
+    elif a == b:
+        print("a and b are equal")
+    else:
+        print("a is greater than b")
 
 def testTypeConversion():
     x = int('3')  # str -> int
@@ -101,6 +110,9 @@ def testDictionary():
     print(dictAll)
     print(dictAll.keys())
     print(dictAll.values())
+
+    mail = dictAll.get('mail');     # Get value by key.
+    print(mail);
 
 def TestRange():
     for x in range(3):

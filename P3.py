@@ -15,10 +15,11 @@ if __name__ == "__main__":
     print(rw)
 
     #testList();
-    testTuple();
+    #testTuple();
     #testSet();
+    testIfElse();
     #testDictionary();
     #testTypeConversion();
 
-    AverageCalc();
-    TestRange();
+    #AverageCalc();
+    #TestRange();
