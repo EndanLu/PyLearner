@@ -14,7 +14,7 @@ if __name__ == "__main__":
     #rw = reverseWords(input)
     #print(rw)
 
-    #testList();
+    testList();
     #testTuple();
     #testSet();
     #testIfElse();

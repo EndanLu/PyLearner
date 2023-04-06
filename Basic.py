@@ -78,6 +78,9 @@ def testList():
     new_names = [name.upper() for name in names if len(name) > 3]
     print(new_names)
 
+    new_names.pop(1)
+    print(new_names)
+
     # 计算30以内的被3整除的数
     multiples = [i for i in range(30) if i % 3 == 0]
     print(multiples)
