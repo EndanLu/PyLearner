@@ -32,5 +32,8 @@ if __name__ == "__main__":
     #fruit_qty = testFuncArgAsList(fruits);
     #print(fruit_qty);
 
-    result = tri_recursion(6);
+    print("\n\nRecursion Example Results")
+    result = tri_recursion(7);
     print(result);
+
+    testLambda();
