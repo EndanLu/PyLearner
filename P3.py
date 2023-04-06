@@ -10,17 +10,23 @@ if __name__ == "__main__":
     for i in sys.argv:
         print(i)
 
-    input = 'I like python3 this small tool';
-    rw = reverseWords(input)
-    print(rw)
+    #input = 'I like python3 this small tool';
+    #rw = reverseWords(input)
+    #print(rw)
 
     #testList();
     #testTuple();
     #testSet();
     #testIfElse();
-    testAndOr();
+    #testAndOr();
     #testDictionary();
     #testTypeConversion();
 
     #AverageCalc();
     #TestRange();
+
+    testFuncDefaultArg()
+    testFuncDefaultArg("Japan")
+
+    fruits = ['Apple', 'Banana', 'Orange'];
+    testFuncArgAsList(fruits)

@@ -142,3 +142,10 @@ def TestRange():
 #    scores = [85, 92, 78, 90, 88]
 #    average_score = sum(scores) / len(scores)
 #    print("平均成绩为：", average_score)
+
+def testFuncDefaultArg(country="China"):
+    print("I am from " + country)   # default parameter is "China"
+
+def testFuncArgAsList(foodlist):
+    for food in foodlist:
+        print(food);
