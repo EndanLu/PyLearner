@@ -149,3 +149,11 @@ def testFuncDefaultArg(country="China"):
 def testFuncArgAsList(foodlist):
     for food in foodlist:
         print(food);
+    return len(foodlist);
+
+def tri_recursion(k):
+  if(k>0):
+    result = k+tri_recursion(k-1)   # 递归
+  else:
+    result = 0
+  return result

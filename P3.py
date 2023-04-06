@@ -25,8 +25,12 @@ if __name__ == "__main__":
     #AverageCalc();
     #TestRange();
 
-    testFuncDefaultArg()
-    testFuncDefaultArg("Japan")
+    #testFuncDefaultArg()
+    #testFuncDefaultArg("Japan")
 
-    fruits = ['Apple', 'Banana', 'Orange'];
-    testFuncArgAsList(fruits)
+    #fruits = ['Apple', 'Banana', 'Orange', 'S60'];
+    #fruit_qty = testFuncArgAsList(fruits);
+    #print(fruit_qty);
+
+    result = tri_recursion(6);
+    print(result);
