@@ -29,6 +29,16 @@ def testIfElse():
     else:
         print("a is greater than b")
 
+def testAndOr():
+    a = 200
+    b = 66
+    c = 500
+    if a > b and c > a:
+        print("Both conditions are True")
+
+    if a > b or a > c:
+        print("At least one condition is true")
+
 def testTypeConversion():
     x = int('3')  # str -> int
     y = float('4.2')  # str -> float

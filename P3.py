@@ -17,7 +17,8 @@ if __name__ == "__main__":
     #testList();
     #testTuple();
     #testSet();
-    testIfElse();
+    #testIfElse();
+    testAndOr();
     #testDictionary();
     #testTypeConversion();
 
