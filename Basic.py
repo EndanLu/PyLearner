@@ -39,6 +39,11 @@ def testTypeConversion():
     print("num_int 与 num_str 相加结果为:", num_sum)
     print("sum 数据类型为:", type(num_sum))
 
+#Python 编程语言中有四种集合数据类型：
+#列表（List）是一种有序和可更改的集合。允许重复的成员。
+#元组（Tuple）是一种有序且不可更改的集合。允许重复的成员。
+#集合（Set）是一个无序和无索引的集合。没有重复的成员。
+#词典（Dictionary）是一个无序，可变和有索引的集合。没有重复的成员。
 
 def testList():
     listAll: list[str] = ['item 1', 'item 2', 'item 3']  # Add type hint for total.
@@ -61,7 +66,9 @@ def testList():
 
 def testTuple():
     tupleAll = ('windows', 123, 2.23, 'linux', 3 + 4j)
-    print(tupleAll)
+    print(tupleAll);
+    print(tupleAll[-1]);    # Print the last element in the tuple.
+    print(tupleAll[2:4]);
 
     # tupleAll[1] = 40;   # Changing tuple item is illegal.
 

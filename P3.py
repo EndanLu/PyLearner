@@ -15,7 +15,7 @@ if __name__ == "__main__":
     print(rw)
 
     #testList();
-    #testTuple();
+    testTuple();
     #testSet();
     #testDictionary();
     #testTypeConversion();
