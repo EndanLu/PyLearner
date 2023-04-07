@@ -4,7 +4,7 @@ import sys
 from FuncCollection import *
 from Basic import *
 from Snake import *
-from Person import *
+from CPerson import *
 
 if __name__ == "__main__":
     print('命令行参数为:')
@@ -39,7 +39,7 @@ if __name__ == "__main__":
 
     #testLambda();
 
-    p1 = Person("Bill", 63)
+    p1 = CPerson("Bill", 63)
+    p1.showAllAttr();
 
-    print(p1.name)
-    print(p1.age)
+    del p1;
