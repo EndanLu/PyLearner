@@ -4,6 +4,7 @@ import sys
 from FuncCollection import *
 from Basic import *
 from Snake import *
+from Person import *
 
 if __name__ == "__main__":
     print('命令行参数为:')
@@ -14,7 +15,7 @@ if __name__ == "__main__":
     #rw = reverseWords(input)
     #print(rw)
 
-    testList();
+    #testList();
     #testTuple();
     #testSet();
     #testIfElse();
@@ -32,8 +33,13 @@ if __name__ == "__main__":
     #fruit_qty = testFuncArgAsList(fruits);
     #print(fruit_qty);
 
-    print("\n\nRecursion Example Results")
-    result = tri_recursion(7);
-    print(result);
+    #print("\n\nRecursion Example Results")
+    #result = tri_recursion(7);
+    #print(result);
 
-    testLambda();
+    #testLambda();
+
+    p1 = Person("Bill", 63)
+
+    print(p1.name)
+    print(p1.age)
