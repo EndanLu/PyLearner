@@ -39,7 +39,11 @@ if __name__ == "__main__":
 
     #testLambda();
 
-    p1 = CPerson("Bill", 63)
+    p1 = CPerson("Bill Gates", 66)
     p1.showAllAttr();
 
+    p2 = CStudent("Elon Musk", 45)
+    p2.showAllAttr();
+
     del p1;
+    del p2;

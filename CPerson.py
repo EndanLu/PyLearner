@@ -9,4 +9,7 @@ class CPerson:
     print(self.name)
     print(self.age)
 
+class CStudent(CPerson):
+  pass;
+
 
