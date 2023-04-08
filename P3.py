@@ -5,6 +5,7 @@ from FuncCollection import *
 from Basic import *
 from Snake import *
 from CPerson import *
+from CStudent import *
 
 if __name__ == "__main__":
     print('命令行参数为:')
@@ -42,7 +43,7 @@ if __name__ == "__main__":
     p1 = CPerson("Bill Gates", 66)
     p1.showAllAttr();
 
-    p2 = CStudent("Elon Musk", 45)
+    p2 = CStudent("Elon Musk", 45, 7)
     p2.showAllAttr();
 
     del p1;
