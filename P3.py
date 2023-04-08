@@ -43,8 +43,9 @@ if __name__ == "__main__":
     p1 = CPerson("Bill Gates", 66)
     p1.showAllAttr();
 
-    p2 = CStudent("Elon Musk", 45, 7)
-    p2.showAllAttr();
+    s1 = CStudent("Elon Musk", 45, 7)
+    s1.showAllAttr();
+    s1.welcome();
 
     del p1;
-    del p2;
+    del s1;
