@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+import platform
 from typing import List
 import sys
 from FuncCollection import *
@@ -6,11 +7,15 @@ from Basic import *
 from Snake import *
 from CPerson import *
 from CStudent import *
+import platform
 
 if __name__ == "__main__":
     print('命令行参数为:')
     for i in sys.argv:
         print(i)
+
+    print(platform.system());
+    print(dir(platform));
 
     #input = 'I like python3 this small tool';
     #rw = reverseWords(input)

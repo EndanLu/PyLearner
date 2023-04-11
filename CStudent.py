@@ -9,7 +9,7 @@ class CStudent(CPerson):
 
     def showAllAttr(self):
         print('---CStudent::showAllAttr()---Begin---')
-        super().showAllAttr();
+        super().showAllAttr();  # 显式调用父类函数。
         print(self.grade);
         print('---CStudent::showAllAttr()---End---')
 
