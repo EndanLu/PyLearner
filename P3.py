@@ -2,12 +2,13 @@
 import platform
 from typing import List
 import sys
+import datetime
 from FuncCollection import *
 from Basic import *
 from Snake import *
 from CPerson import *
 from CStudent import *
-import platform
+
 
 if __name__ == "__main__":
     print('命令行参数为:')
@@ -16,6 +17,11 @@ if __name__ == "__main__":
 
     print(platform.system());
     print(dir(platform));
+
+    x = datetime.datetime.now()
+    print(x)
+    print(x.year)
+    print(x.strftime("%A"))
 
     #input = 'I like python3 this small tool';
     #rw = reverseWords(input)
@@ -54,3 +60,5 @@ if __name__ == "__main__":
 
     del p1;
     del s1;
+
+
