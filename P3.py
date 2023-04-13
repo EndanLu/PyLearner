@@ -21,7 +21,11 @@ if __name__ == "__main__":
     x = datetime.datetime.now()
     print(x)
     print(x.year)
-    print(x.strftime("%A"))
+    print(x.strftime("%A"))     # weekday
+    print(x.strftime("%B"))     # month
+
+    x = datetime.datetime(2023, 5, 18)
+    print(x)
 
     #input = 'I like python3 this small tool';
     #rw = reverseWords(input)
