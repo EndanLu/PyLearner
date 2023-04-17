@@ -67,5 +67,6 @@ if __name__ == "__main__":
     del s1;
 
     testJson();
+    testRegEx();
 
 

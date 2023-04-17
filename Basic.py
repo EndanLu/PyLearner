@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 
 import sys
-import json
+import json # import JSON
+import re   # import 正则表达式
 
 
 def testBasic():
@@ -224,3 +225,23 @@ def testJson():
     }
 
     print(json.dumps(x, indent=4))
+
+
+def testRegEx():
+    txt = "China is a great country"
+    x = re.search("^China.*country$", txt)
+
+    if (x):
+        print("YES! We have a match!")
+    else:
+        print("No match")
+
+    x = re.findall("a", txt)
+    print(x)
+
+    x = re.findall("USA", txt)
+    print(x)
+    if (x):
+        print("Yes, there is at least one match!")
+    else:
+        print("No match")
