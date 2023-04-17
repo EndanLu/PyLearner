@@ -198,3 +198,14 @@ def testJson():
 
     # the result is a JSON string:
     print(y)
+
+    # Different Python Objects -> JSON
+    print(json.dumps({"name": "Bill", "age": 63}))
+    print(json.dumps(["apple", "bananas"]))
+    print(json.dumps(("apple", "bananas")))
+    print(json.dumps("hello"))
+    print(json.dumps(42))
+    print(json.dumps(31.76))
+    print(json.dumps(True))
+    print(json.dumps(False))
+    print(json.dumps(None))
