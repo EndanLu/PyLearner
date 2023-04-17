@@ -209,3 +209,18 @@ def testJson():
     print(json.dumps(True))
     print(json.dumps(False))
     print(json.dumps(None))
+
+    x = {
+        "name": "Bill",
+        "age": 63,
+        "married": True,
+        "divorced": False,
+        "children": ("Jennifer", "Rory", "Phoebe"),
+        "pets": None,
+        "cars": [
+            {"model": "Porsche", "mpg": 38.2},
+            {"model": "BMW M5", "mpg": 26.9}
+        ]
+    }
+
+    print(json.dumps(x, indent=4))
