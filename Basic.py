@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 
 import sys
+import json
 
 
 def testBasic():
@@ -171,3 +172,13 @@ def testLambda():
 
     print(mydoubler(11))
     print(mytripler(11))
+
+def testJson():
+    # some JSON:
+    x = '{ "name":"Bill", "age":63, "city":"Seatle"}'
+
+    # parse x:
+    y = json.loads(x)
+
+    # the result is a Python dictionary:
+    print(y["age"])
