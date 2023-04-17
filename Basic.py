@@ -174,7 +174,7 @@ def testLambda():
     print(mytripler(11))
 
 def testJson():
-    # JSON -> Python Dict
+    # JSON -> Python
     # JSON data:
     json_origin = '{ "name":"Bill", "age":63, "city":"Seatle", "gender":"Male"}'
 
@@ -185,7 +185,7 @@ def testJson():
     print(parsed["gender"])
 
     # ---------------------------------
-    # Python Dict -> JSON
+    # Python -> JSON
     # a Python object (dict):
     dict = {
         "name": "Bill",
