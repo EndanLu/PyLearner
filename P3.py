@@ -3,6 +3,7 @@ import platform
 from typing import List
 import sys
 import datetime
+import json
 from FuncCollection import *
 from Basic import *
 from Snake import *
@@ -64,5 +65,14 @@ if __name__ == "__main__":
 
     del p1;
     del s1;
+
+    # some JSON:
+    x = '{ "name":"Bill", "age":63, "city":"Seatle"}'
+
+    # parse x:
+    y = json.loads(x)
+
+    # the result is a Python dictionary:
+    print(y["age"])
 
 
