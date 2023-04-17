@@ -174,11 +174,27 @@ def testLambda():
     print(mytripler(11))
 
 def testJson():
-    # some JSON:
-    x = '{ "name":"Bill", "age":63, "city":"Seatle"}'
+    # JSON -> Python Dict
+    # JSON data:
+    json_origin = '{ "name":"Bill", "age":63, "city":"Seatle", "gender":"Male"}'
 
     # parse x:
-    y = json.loads(x)
+    parsed = json.loads(json_origin)
 
     # the result is a Python dictionary:
-    print(y["age"])
+    print(parsed["gender"])
+
+    # ---------------------------------
+    # Python Dict -> JSON
+    # a Python object (dict):
+    dict = {
+        "name": "Bill",
+        "age": 63,
+        "city": "Seatle"
+    }
+
+    # convert into JSON:
+    y = json.dumps(dict)
+
+    # the result is a JSON string:
+    print(y)
