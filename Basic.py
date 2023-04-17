@@ -245,3 +245,8 @@ def testRegEx():
         print("Yes, there is at least one match!")
     else:
         print("No match")
+
+    str = "China is a great country"
+    x = re.search("\s", str)    # Looking for a whitespace in str
+
+    print("The first white-space character is located in position:", x.start())
