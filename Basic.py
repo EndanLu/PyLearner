@@ -250,3 +250,9 @@ def testRegEx():
     x = re.search("\s", str)    # Looking for a whitespace in str
 
     print("The first white-space character is located in position:", x.start())
+
+    x = re.split("\s", str)     # Split str with whitespace
+    print(x)
+
+    x = re.sub("\s", "*", str)  # Replace whitespace with *
+    print(x)
