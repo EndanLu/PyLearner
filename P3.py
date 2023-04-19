@@ -32,24 +32,6 @@ if __name__ == "__main__":
     #rw = reverseWords(input)
     #print(rw)
 
-    #testList();
-    #testTuple();
-    #testSet();
-    #testIfElse();
-    #testAndOr();
-    #testDictionary();
-    #testTypeConversion();
-
-    #AverageCalc();
-    #TestRange();
-
-    #testFuncDefaultArg()
-    #testFuncDefaultArg("Japan")
-
-    #fruits = ['Apple', 'Banana', 'Orange', 'S60'];
-    #fruit_qty = testFuncArgAsList(fruits);
-    #print(fruit_qty);
-
     #print("\n\nRecursion Example Results")
     #result = tri_recursion(7);
     #print(result);
