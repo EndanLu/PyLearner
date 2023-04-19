@@ -266,3 +266,12 @@ def testTryExcept():
         print("Something else went wrong")
     else:
         print("Nothing went wrong.")
+    finally:
+        print("Finally operation")
+
+    #x = "hello"
+    #if not type(x) is int:
+    #    raise TypeError("Exception message defined by Daniel: Only integers are allowed")
+
+
+
