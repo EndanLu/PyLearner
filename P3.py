@@ -50,5 +50,6 @@ if __name__ == "__main__":
 
     testJson();
     testRegEx();
+    testTryExcept();
 
 
