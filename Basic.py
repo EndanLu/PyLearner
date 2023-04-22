@@ -278,3 +278,17 @@ def testInput():
     x = input()
     print("Welcome", x, "!")
 
+def testFormat():
+    price = 52
+    txt = "The price is {} dollars."
+    print(txt.format(price))
+
+    txt = "The price is {:.2f} dollars"
+    print(txt.format(price))
+
+    quantity = 3
+    itemno = 567
+    price = 52
+    myorder = "I want {} pieces of item number {} for {:.2f} dollars."
+    print(myorder.format(quantity, itemno, price))
+

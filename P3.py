@@ -52,6 +52,7 @@ if __name__ == "__main__":
     testRegEx();
     testTryExcept();
     testInput();
+    testFormat();
 
 
 
