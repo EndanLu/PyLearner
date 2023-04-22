@@ -271,7 +271,10 @@ def testTryExcept():
 
     #x = "hello"
     #if not type(x) is int:
-    #    raise TypeError("Exception message defined by Daniel: Only integers are allowed")
+    #raise TypeError("Exception message defined by Daniel: Only integers are allowed")
 
-
+def testInput():
+    print("Input your name: ")
+    x = input()
+    print("Welcome", x, "!")
 
