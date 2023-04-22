@@ -278,7 +278,7 @@ def testInput():
     x = input()
     print("Welcome", x, "!")
 
-def testFormat():
+def testStringFormat():     # 演示若干种用format()函数构建String的方法，个人认为最后一种最实用。
     price = 52
     txt = "The price is {} dollars."
     print(txt.format(price))
@@ -291,4 +291,14 @@ def testFormat():
     price = 52
     myorder = "I want {} pieces of item number {} for {:.2f} dollars."
     print(myorder.format(quantity, itemno, price))
+
+    age = 63
+    name = "Bill"
+    txt = "His name is {1}, {1} is {0} years old. \nWelcome {1}!"
+    print(txt.format(age, name))
+
+    carName = "Volvo"
+    carModel = "S60"
+    myorder = "I have a {carname}, it is a {model}."
+    print(myorder.format(carname=carName, model=carModel))
 
