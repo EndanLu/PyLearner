@@ -1,4 +1,0 @@
-# Add new file to check modification. git add, commit, push.
-Line 1.
-Line 2.
-Add Line 3.

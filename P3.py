@@ -9,6 +9,7 @@ from Basic import *
 from Snake import *
 from CPerson import *
 from CStudent import *
+from FileOperation import *
 
 
 if __name__ == "__main__":
@@ -53,6 +54,7 @@ if __name__ == "__main__":
     #testTryExcept();
     #testInput();
     testStringFormat();
+    testFileOperations();
 
 
 
