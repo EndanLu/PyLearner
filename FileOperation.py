@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 
+import datetime
+
 def testReadFile():
     #f = open("LinuxRef\\modify_commit.txt", "r")
     f = open("README.md", "r")
@@ -20,10 +22,16 @@ def testReadFile():
     print("*****************************")
 
 def testAppendFile():
-    f = open("README.md", "a")
-    f.write("New Line Appended\n")
+    f = open("testing.txt", "a")
+    current = datetime.datetime.now()
+    current = current.strftime("%c")
+
+    newLine = "New Line Appended at {time}"
+    newLine = newLine.format(time=current)
+
+    f.write(newLine)
     f.close()
 
-    f = open("README.md", "r")
+    f = open("testing.txt", "r")
     print(f.read())
     f.close()

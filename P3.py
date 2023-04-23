@@ -49,11 +49,11 @@ if __name__ == "__main__":
     del p1;
     del s1;
 
-    testJson();
+    #testJson();
     #testRegEx();
     #testTryExcept();
     #testInput();
-    testStringFormat();
+    #testStringFormat();
     testReadFile();
     testAppendFile();
 

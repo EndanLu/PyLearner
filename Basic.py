@@ -300,5 +300,6 @@ def testStringFormat():     # 演示若干种用format()函数构建String的方
     carName = "Volvo"
     carModel = "S60"
     myorder = "I have a {carname}, it is a {model}."
-    print(myorder.format(carname=carName, model=carModel))
+    myorder = myorder.format(carname=carName, model=carModel)
+    print(myorder)
 
