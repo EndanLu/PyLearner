@@ -54,7 +54,7 @@ if __name__ == "__main__":
     #testTryExcept();
     #testInput();
     testStringFormat();
-    testFileOperations();
+    testReadFile();
 
 
 
