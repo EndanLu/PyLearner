@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 
 import datetime
+import os
 
 def testReadFile():
     #f = open("LinuxRef\\modify_commit.txt", "r")
@@ -45,3 +46,9 @@ def testWriteFile():
     f = open("testing.txt", "r")
     print(f.read())
     f.close()
+
+def testRemoveFile():
+    if os.path.exists("demofile.txt"):
+        os.remove("demofile.txt")
+    else:
+        print("The file does not exist")

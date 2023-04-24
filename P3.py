@@ -57,6 +57,7 @@ if __name__ == "__main__":
     testReadFile();
     testAppendFile();
     testWriteFile();
+    testRemoveFile();
 
 
 
