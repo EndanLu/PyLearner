@@ -35,3 +35,13 @@ def testAppendFile():
     f = open("testing.txt", "r")
     print(f.read())
     f.close()
+
+def testWriteFile():
+    f = open("testing.txt", "w")
+    f.write("Woops! I have deleted the content!")
+    f.close()
+
+    # open and read the file after the appending:
+    f = open("testing.txt", "r")
+    print(f.read())
+    f.close()

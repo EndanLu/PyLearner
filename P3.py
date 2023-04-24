@@ -56,6 +56,7 @@ if __name__ == "__main__":
     #testStringFormat();
     testReadFile();
     testAppendFile();
+    testWriteFile();
 
 
 
