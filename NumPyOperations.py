@@ -32,5 +32,14 @@ def testNumPyElementPickUp():
     print('5th element on 2nd dim: ', arr[1, 4])
     print('Last element from 2nd dim: ', arr[1, -1])
 
+def testNumPyArrayCut():
+    arr = np.array([1, 2, 3, 4, 5, 6, 7])
+    print(arr[1:5])     # Starting from element no.1, not including no.5
+    print(arr[4:])      # Starting from element no.4, to the end.
+    print(arr[:4])      # Starting from beginning, not including element no.4
+
+    print(arr[1:5:2])   # Starting from element no.1, not including no.5, step is 2.
+    print(arr[::2])
+
 
 
