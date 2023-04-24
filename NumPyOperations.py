@@ -39,7 +39,10 @@ def testNumPyArrayCut():
     print(arr[:4])      # Starting from beginning, not including element no.4
 
     print(arr[1:5:2])   # Starting from element no.1, not including no.5, step is 2.
-    print(arr[::2])
+    print(arr[::2])     # Step = 2.
+
+    arr_2d = np.array([[1, 2, 3, 4, 5], [6, 7, 8, 9, 10]])
+    print(arr_2d[1, 1:4])
 
 
 
