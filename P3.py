@@ -61,6 +61,7 @@ if __name__ == "__main__":
     #testRemoveFile();
 
     testNumPyBase();
+    testNumPyElementPickUp();
 
 
 
