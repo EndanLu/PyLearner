@@ -10,6 +10,7 @@ from Snake import *
 from CPerson import *
 from CStudent import *
 from FileOperation import *
+from NumPyOperations import *
 
 
 if __name__ == "__main__":
@@ -54,10 +55,12 @@ if __name__ == "__main__":
     #testTryExcept();
     #testInput();
     #testStringFormat();
-    testReadFile();
-    testAppendFile();
-    testWriteFile();
-    testRemoveFile();
+    #testReadFile();
+    #testAppendFile();
+    #testWriteFile();
+    #testRemoveFile();
+
+    testNumPyBase();
 
 
 
