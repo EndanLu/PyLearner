@@ -58,9 +58,15 @@ def testNumPyDataType():
     print(arr3)
     print(arr3.dtype)
 
-    # Convert data type.
+    # Convert data type from float to int.
     arr = np.array([1.1, 2.1, 3.1])
     newarr = arr.astype('i8')       # i4 means int32, i8 means int64.
+    print(newarr)
+    print(newarr.dtype)
+
+    # Convert data type from int to bool.
+    arr = np.array([1, 0, 3])
+    newarr = arr.astype(bool)       # 0 is False, non-zero is True
     print(newarr)
     print(newarr.dtype)
 
