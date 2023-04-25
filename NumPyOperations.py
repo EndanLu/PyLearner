@@ -70,5 +70,16 @@ def testNumPyDataType():
     print(newarr)
     print(newarr.dtype)
 
+def testNumPyCopyView():
+    arr = np.array([1, 2, 3, 4, 5])
+    arr_copy = arr.copy()
+    arr_copy[0] = 61
+    print(arr)
+    print(arr_copy)
+
+    arr_view = arr.view()
+    arr_view[0] = 81
+    print(arr)
+    print(arr_view)
 
 
