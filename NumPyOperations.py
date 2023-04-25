@@ -82,4 +82,7 @@ def testNumPyCopyView():
     print(arr)
     print(arr_view)
 
+    print(arr_copy.base)        # have own data, return "None"
+    print(arr_view.base)        # don't have own data, return the original array.
+
 
