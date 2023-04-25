@@ -63,6 +63,7 @@ if __name__ == "__main__":
     testNumPyBase();
     testNumPyElementPickUp();
     testNumPyArrayCut();
+    testNumPyDataType();
 
 
 

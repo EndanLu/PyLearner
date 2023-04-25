@@ -47,4 +47,22 @@ def testNumPyArrayCut():
     print(arr_2d[0:2, 1:4])
 
 
+def testNumPyDataType():
+    arr = np.array([1, 2, 3, 4])
+    print(arr.dtype)
+
+    arr2 = np.array(['apple', 'banana', 'cherry'])
+    print(arr2.dtype)
+
+    arr3 = np.array([1, 2, 3, 4], dtype='S')
+    print(arr3)
+    print(arr3.dtype)
+
+    # Convert data type.
+    arr = np.array([1.1, 2.1, 3.1])
+    newarr = arr.astype('i8')       # i4 means int32, i8 means int64.
+    print(newarr)
+    print(newarr.dtype)
+
+
 
