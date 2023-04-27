@@ -60,13 +60,14 @@ if __name__ == "__main__":
     #testWriteFile();
     #testRemoveFile();
 
-    testNumPyBase();
-    testNumPyElementPickUp();
-    testNumPyArrayCut();
-    testNumPyDataType();
-    testNumPyCopyView();
-    testNumPyShape();
-    testNumPyIteration();
+    #testNumPyBase();
+    #testNumPyElementPickUp();
+    #testNumPyArrayCut();
+    #testNumPyDataType();
+    #testNumPyCopyView();
+    #testNumPyShape();
+    #testNumPyIter();
+    testNumPyEnum();
 
 
 

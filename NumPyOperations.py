@@ -101,7 +101,7 @@ def testNumPyShape():
     newarr = arr.reshape(-1)    # 2D -> 1D
     print(newarr)
 
-def testNumPyIteration():
+def testNumPyIter():
     arr = np.array([[1, 2, 3], [4, 5, 6]])
 
     for x in arr:
@@ -115,3 +115,16 @@ def testNumPyIteration():
     arr = np.array([[[1, 2], [3, 4]], [[5, 6], [7, 8]]])
     for x in np.nditer(arr):
         print(x)
+
+    arr = np.array([[1, 2, 3, 4], [5, 6, 7, 8]])
+    for x in np.nditer(arr[:,::2]):         # 1, 3, 5, 7
+        print(x)
+
+def testNumPyEnum():
+    arr = np.array(['a', 'b', 'c'])
+    for idx, x in np.ndenumerate(arr):
+        print(idx, x)
+
+    arr = np.array([[1, 2, 3, 4], [5, 6, 7, 8]])
+    for idx, x in np.ndenumerate(arr):
+        print(idx, x)
