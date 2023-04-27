@@ -96,3 +96,22 @@ def testNumPyShape():
     newarr = arr.reshape(2, 3, 2)
     print(newarr)
     print(newarr.base)          # Reshape() return one view, not copy.
+
+    arr = np.array([[1, 2, 3], [4, 5, 6]])
+    newarr = arr.reshape(-1)    # 2D -> 1D
+    print(newarr)
+
+def testNumPyIteration():
+    arr = np.array([[1, 2, 3], [4, 5, 6]])
+
+    for x in arr:
+        print(x)        # [1, 2, 3], [4, 5, 6]
+
+    for x in arr:
+        for y in x:
+            print(y)    # 1, 2, 3, 4, 5, 6
+
+    # We can also use nditer() to avoid multiple layers of for()
+    arr = np.array([[[1, 2], [3, 4]], [[5, 6], [7, 8]]])
+    for x in np.nditer(arr):
+        print(x)
