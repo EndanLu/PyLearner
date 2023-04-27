@@ -82,7 +82,9 @@ def testNumPyCopyView():
     print(arr)
     print(arr_view)
 
-    print(arr_copy.base)        # have own data, return "None"
-    print(arr_view.base)        # don't have own data, return the original array.
+    print(arr_copy.base)        # Copy has own data, return "None"
+    print(arr_view.base)        # View doesn't have own data, return the original array.
 
-
+def testNumPyShape():
+    arr = np.array([[1, 2, 3, 4], [5, 6, 7, 8]])
+    print(arr.shape)
