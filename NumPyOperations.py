@@ -128,3 +128,9 @@ def testNumPyEnum():
     arr = np.array([[1, 2, 3, 4], [5, 6, 7, 8]])
     for idx, x in np.ndenumerate(arr):
         print(idx, x)
+
+def testNumPyConcat():
+    arr_1 = np.array([1, 2, 3])
+    arr_2 = np.array([4, 5, 6])
+    newarr = np.concatenate((arr_1, arr_2))
+    print(newarr)
