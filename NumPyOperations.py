@@ -134,3 +134,8 @@ def testNumPyConcat():
     arr_2 = np.array([4, 5, 6])
     newarr = np.concatenate((arr_1, arr_2))
     print(newarr)
+
+    arr_3 = np.array([[1, 2], [3, 4]])
+    arr_4 = np.array([[5, 6], [7, 8]])
+    newarr = np.concatenate((arr_3, arr_4), axis=1)
+    print(newarr)
