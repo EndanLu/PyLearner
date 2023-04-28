@@ -67,8 +67,9 @@ if __name__ == "__main__":
     #testNumPyCopyView();
     #testNumPyShape();
     #testNumPyIter();
-    testNumPyEnum();
-    testNumPyConcat();
+    #testNumPyEnum();
+    #testNumPyConcat();
+    testNumPyStack();
 
 
 

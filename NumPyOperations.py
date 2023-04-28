@@ -139,3 +139,23 @@ def testNumPyConcat():
     arr_4 = np.array([[5, 6], [7, 8]])
     newarr = np.concatenate((arr_3, arr_4), axis=1)
     print(newarr)
+
+def testNumPyStack():
+    arr1 = np.array([1, 2, 3])
+    arr2 = np.array([4, 5, 6])
+
+    print("************ stack(), axis = 1 ******************")
+    arr = np.stack((arr1, arr2), axis=1)
+    print(arr)
+
+    print("************ hstack() ******************")
+    arr = np.hstack((arr1, arr2))
+    print(arr)
+
+    print("************ dstack() ******************")
+    arr = np.dstack((arr1, arr2))
+    print(arr)
+
+    print("************ vstack() ******************")
+    arr = np.vstack((arr1, arr2))
+    print(arr)
