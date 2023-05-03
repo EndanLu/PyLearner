@@ -159,3 +159,9 @@ def testNumPyStack():
     print("************ vstack() ******************")
     arr = np.vstack((arr1, arr2))
     print(arr)
+
+def testNumPyArraySplit():
+    arr = np.array([1, 2, 3, 4, 5, 6])
+    newarr = np.array_split(arr, 3)
+    print(newarr)
+    print(newarr[0])

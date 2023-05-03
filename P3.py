@@ -70,6 +70,7 @@ if __name__ == "__main__":
     #testNumPyEnum();
     #testNumPyConcat();
     testNumPyStack();
+    testNumPyArraySplit();
 
 
 
