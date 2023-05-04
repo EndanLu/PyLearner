@@ -183,12 +183,21 @@ def testNumPyArraySplit():
 def testNumPySearch():
     print("\n*******testNumPySearch()*******")
     arr = np.array([1, 2, 3, 4, 5, 4, 4])
-    x = np.where(arr == 4)      # Find 4 in array
+    x = np.where(arr == 4)          # Find 4 in array
     print(x)
 
     arr = np.array([1, 2, 3, 4, 5, 6, 7, 8])
-    x = np.where(arr % 2 == 0)
+    x = np.where(arr % 2 == 0)      # Find even number in array.
     print(x)
 
-    x = np.where(arr % 2 == 1)
+    x = np.where(arr % 2 == 1)      # Find odd number in array.
     print(x)
+
+    arr = np.array([6, 7, 8, 9])
+    x = np.searchsorted(arr, 7, side='right')
+    print(x)
+
+def testNumPySort():
+    arr = np.array([3, 2, 0, 1])
+    arr = np.sort(arr)
+    print(arr)

@@ -71,7 +71,8 @@ if __name__ == "__main__":
     #testNumPyConcat();
     #testNumPyStack();
     #testNumPyArraySplit();
-    testNumPySearch();
+    #testNumPySearch();
+    testNumPySort();
 
 
 
