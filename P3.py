@@ -69,8 +69,9 @@ if __name__ == "__main__":
     #testNumPyIter();
     #testNumPyEnum();
     #testNumPyConcat();
-    testNumPyStack();
-    testNumPyArraySplit();
+    #testNumPyStack();
+    #testNumPyArraySplit();
+    testNumPySearch();
 
 
 

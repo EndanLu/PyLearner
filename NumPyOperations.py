@@ -175,3 +175,20 @@ def testNumPyArraySplit():
     arr = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9], [10, 11, 12], [13, 14, 15], [16, 17, 18]])
     newarr = np.array_split(arr, 3)
     print(newarr)
+
+    arr = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9], [10, 11, 12], [13, 14, 15], [16, 17, 18]])
+    newarr = np.hsplit(arr, 3)
+    print(newarr)
+
+def testNumPySearch():
+    print("\n*******testNumPySearch()*******")
+    arr = np.array([1, 2, 3, 4, 5, 4, 4])
+    x = np.where(arr == 4)      # Find 4 in array
+    print(x)
+
+    arr = np.array([1, 2, 3, 4, 5, 6, 7, 8])
+    x = np.where(arr % 2 == 0)
+    print(x)
+
+    x = np.where(arr % 2 == 1)
+    print(x)
