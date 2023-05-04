@@ -201,3 +201,7 @@ def testNumPySort():
     arr = np.array([3, 2, 0, 1])
     arr = np.sort(arr)
     print(arr)
+
+    arr = np.array(['banana', 'cherry', 'apple'])
+    arr = np.sort(arr)
+    print(arr)
