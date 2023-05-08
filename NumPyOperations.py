@@ -213,3 +213,10 @@ def testNumPySort():
     arr = np.array([[3, 2, 4], [5, 0, 1]])
     arr = np.sort(arr)
     print(arr)
+
+def testNumPyArrayFilter():
+    arr = np.array([61, 62, 63, 64, 65])
+    x = [True, False, True, False, True]
+
+    newarr = arr[x]
+    print(newarr)

@@ -72,7 +72,8 @@ if __name__ == "__main__":
     #testNumPyStack();
     #testNumPyArraySplit();
     #testNumPySearch();
-    testNumPySort();
+    #testNumPySort();
+    testNumPyArrayFilter();
 
 
 
