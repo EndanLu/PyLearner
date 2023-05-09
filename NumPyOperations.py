@@ -289,3 +289,9 @@ def testNumPyRandom():
 
     x = random.rand(3, 5)       # 随机二维数组，3行5列，0~1浮点数。
     print(x)
+
+    x = random.choice([1, 3, 5, 7, 9])     # 从已知数组[1,3,5,7,9]中随机选择一个数
+    print(x)
+
+    x = random.choice([3, 5, 7, 9], size=(3, 5))    # 生成由数组参数（3、5、7 和 9）中的值组成的二维数组
+    print(x)
