@@ -280,3 +280,12 @@ def testNumPyRandom():
 
     x = random.rand()           # 0~1之间的随机浮点数
     print(x)
+
+    x = random.randint(100, size=(5))   # 随机一维数组，含有5个0~100之间的整数
+    print(x)
+
+    x = random.randint(100, size=(3, 5))    # 随机二维数组，3行5列，0~100整数。
+    print(x)
+
+    x = random.rand(3, 5)       # 随机二维数组，3行5列，0~1浮点数。
+    print(x)
