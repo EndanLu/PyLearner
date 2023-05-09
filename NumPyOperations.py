@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 
 import numpy as np
+from numpy import random
 
 def testNumPyBase():
     print("NumPy Version: " + np.__version__)
@@ -271,3 +272,11 @@ def testNumPyArrayFilter():
 
     print(filter_arr)
     print(newarr)
+
+
+def testNumPyRandom():
+    x = random.randint(100)     # 随机整数
+    print(x)
+
+    x = random.rand()           # 0~1之间的随机浮点数
+    print(x)

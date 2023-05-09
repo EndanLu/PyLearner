@@ -73,7 +73,8 @@ if __name__ == "__main__":
     #testNumPyArraySplit();
     #testNumPySearch();
     #testNumPySort();
-    testNumPyArrayFilter();
+    #testNumPyArrayFilter();
+    testNumPyRandom();
 
 
 
