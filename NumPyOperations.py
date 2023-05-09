@@ -295,3 +295,18 @@ def testNumPyRandom():
 
     x = random.choice([3, 5, 7, 9], size=(3, 5))    # 生成由数组参数（3、5、7 和 9）中的值组成的二维数组
     print(x)
+
+
+def testNumPyUFunc():
+    # 不用UFunc，合并两个数组
+    x = [1, 2, 3, 4]
+    y = [4, 5, 6, 7]
+    z = []
+
+    for i, j in zip(x, y):
+        z.append(i + j)
+    print(z)
+
+    # 用UFunc中的add()函数，来合并两个数组。
+    z = np.add(x, y)
+    print(z)
