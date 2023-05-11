@@ -310,3 +310,12 @@ def testNumPyUFunc():
     # 用UFunc中的add()函数，来合并两个数组。
     z = np.add(x, y)
     print(z)
+
+
+def testNumPyMathBasic():
+    speed = [99, 86, 87, 88, 111, 86, 103, 87, 94, 78, 77, 85, 86]
+    speed_mean = np.mean(speed)
+    print(speed_mean)
+
+    speed_median = np.median(speed)
+    print(speed_median)
