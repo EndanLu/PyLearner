@@ -361,3 +361,9 @@ def testNumPyScatter():
 
     plt.scatter(x, y)
     plt.show()
+
+    x = np.random.normal(5.0, 1.0, 1000)        # 1000随机数，正态分布。平均值为5，标准差为1。
+    y = np.random.normal(10.0, 2.0, 1000)
+
+    plt.scatter(x, y)
+    plt.show()
