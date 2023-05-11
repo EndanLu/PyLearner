@@ -83,7 +83,7 @@ if __name__ == "__main__":
     #testNumPyNormalHist();
     #testNumPyScatter();
     testSciPyLinRegress();
-    testNumPyPoly1d();
+    testNumPyPolyfit();
 
 
 

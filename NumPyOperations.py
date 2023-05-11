@@ -387,14 +387,18 @@ def testSciPyLinRegress():
     plt.title('Y = ' + (str)(slope) + ' * X + ' + (str)(intercept))
     plt.show()                      # 显示图，在同一张图上显示散点和线性回归直线。
 
-def testNumPyPoly1d():
+def testNumPyPolyfit():
     x = [1, 2, 3, 5, 6, 7, 8, 9, 10, 12, 13, 14, 15, 16, 18, 19, 21, 22]
     y = [100, 90, 80, 60, 60, 55, 60, 65, 70, 70, 75, 76, 78, 79, 90, 99, 99, 100]
 
-    mymodel = np.poly1d(np.polyfit(x, y, 3))
+    mymodel = np.poly1d(np.polyfit(x, y, 3))    # 先用polyfit做曲线拟合，3表示拟合程度。
+                                                # 再用poly1d生成多项式模型。
+                                                # 比如Poly1d(1, 2, 3), 对应的多项式是 y = square(x)+2x+3.
+    print(np.poly1d(mymodel))                   # 打印拟合后的多项式模型。
 
-    myline = np.linspace(1, 22, 100)
+    myline = np.linspace(1, 22, 100)            # 定义X轴范围
 
-    plt.scatter(x, y)
-    plt.plot(myline, mymodel(myline))
-    plt.show()
+    plt.scatter(x, y)                           # 绘制散点
+    plt.plot(myline, mymodel(myline))           # 绘制多项式回归曲线
+    plt.title('Y = ' + str(mymodel))
+    plt.show()                                  # 显示图，在同一张图上显示散点和多项式回归直线。
