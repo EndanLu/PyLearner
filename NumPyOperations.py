@@ -315,12 +315,20 @@ def testNumPyUFunc():
 
 def testNumPyMathBasic():
     speed = [99, 86, 87, 88, 111, 86, 103, 87, 94, 78, 77, 85, 86]
-    speed_mean = np.mean(speed)
+    speed_mean = np.mean(speed)         # 平均值
     print(speed_mean)
 
-    speed_median = np.median(speed)
+    speed_median = np.median(speed)     # 中位数
     print(speed_median)
 
     speed = [99, 86, 87, 88, 111, 86, 103, 87, 94, 78, 77, 85, 86]
-    x = stats.mode(speed, keepdims=False)        # In new version of scipy, need to set keepdims parameter.
+    x = stats.mode(speed, keepdims=False)        # 众值。In new version of scipy, need to set keepdims parameter.
+    print(x)
+
+def testNumPyStdVar():
+    speed = [32, 111, 138, 28, 59, 77, 97]
+    x = np.std(speed)        # 标准差
+    print(x)
+
+    x = np.var(speed)        # 方差
     print(x)
