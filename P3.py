@@ -79,8 +79,9 @@ if __name__ == "__main__":
     #testNumPyMathBasic();
     #testNumPyStdVar();
     #testNumPyPercentile();
-    testNumPyUniformHist();
-    testNumPyNormalHist();
+    #testNumPyUniformHist();
+    #testNumPyNormalHist();
+    testNumPyScatter();
 
 
 
