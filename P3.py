@@ -78,7 +78,8 @@ if __name__ == "__main__":
     #testNumPyUFunc();
     #testNumPyMathBasic();
     #testNumPyStdVar();
-    testNumPyPercentile();
+    #testNumPyPercentile();
+    testNumPyUniformHist();
 
 
 

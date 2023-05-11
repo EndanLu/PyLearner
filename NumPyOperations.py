@@ -3,6 +3,7 @@
 import numpy as np
 from numpy import random
 from scipy import stats
+import matplotlib.pyplot as plt
 
 def testNumPyBase():
     print("NumPy Version: " + np.__version__)
@@ -340,3 +341,11 @@ def testNumPyPercentile():
 
     x = np.percentile(ages, 90)      # 61. 意味着90%的人的年龄在61岁以下。
     print(x)
+
+def testNumPyUniformHist():
+    x = np.random.uniform(0.0, 5.0, 250)
+    print(x)
+
+    plt.hist(x, 5)
+    plt.show()
+
