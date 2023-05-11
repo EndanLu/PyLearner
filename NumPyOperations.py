@@ -373,6 +373,8 @@ def testSciPyLinRegress():
     y = [99, 86, 87, 88, 111, 86, 103, 87, 94, 78, 77, 85, 86]
 
     slope, intercept, r, p, std_err = stats.linregress(x, y)        # 利用stats.linregress()返回线性回归所需关键值，如斜率，截值。
+    print("Slope = ", slope)
+    print("intercept = ", intercept)
     print("R-Squared = ", r)        # R-Squared值，范围0~1。0表示不相关，1表示100%相关。
 
     def myfunc(axis_x):
@@ -382,5 +384,5 @@ def testSciPyLinRegress():
 
     plt.scatter(x, y)               # 绘制散点
     plt.plot(x, mymodel)            # 绘制线性回归直线
-    plt.title('Y=' + (str)(slope) + '*X + ' + (str)(intercept))
+    plt.title('Y = ' + (str)(slope) + ' * X + ' + (str)(intercept))
     plt.show()                      # 显示图，在同一张图上显示散点和线性回归直线。
