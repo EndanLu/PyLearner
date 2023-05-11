@@ -327,8 +327,16 @@ def testNumPyMathBasic():
 
 def testNumPyStdVar():
     speed = [32, 111, 138, 28, 59, 77, 97]
-    x = np.std(speed)        # 标准差
+    x = np.std(speed)        # 标准差, Sigma
     print(x)
 
-    x = np.var(speed)        # 方差
+    x = np.var(speed)        # 方差, Sigma Square
+    print(x)
+
+def testNumPyPercentile():
+    ages = [5, 31, 43, 48, 50, 41, 7, 11, 15, 39, 80, 82, 32, 2, 8, 6, 25, 36, 27, 61, 31]
+    x = np.percentile(ages, 75)      # 43. 意味着75%的人的年龄在43岁以下。
+    print(x)
+
+    x = np.percentile(ages, 90)      # 61. 意味着90%的人的年龄在61岁以下。
     print(x)

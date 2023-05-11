@@ -74,10 +74,11 @@ if __name__ == "__main__":
     #testNumPySearch();
     #testNumPySort();
     #testNumPyArrayFilter();
-    testNumPyRandom();
-    testNumPyUFunc();
-    testNumPyMathBasic();
-    testNumPyStdVar();
+    #testNumPyRandom();
+    #testNumPyUFunc();
+    #testNumPyMathBasic();
+    #testNumPyStdVar();
+    testNumPyPercentile();
 
 
 
