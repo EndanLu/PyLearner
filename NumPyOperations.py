@@ -349,3 +349,8 @@ def testNumPyUniformHist():
     plt.hist(pixels, bins=256, color='Gray')         # 直方图
     plt.show()
 
+def testNumPyNormalHist():
+    x = np.random.normal(5.0, 1.0, 100000)       # 十万随机数，正态分布。平均值为5，标准差为1。
+
+    plt.hist(x, 100)
+    plt.show()

@@ -80,6 +80,7 @@ if __name__ == "__main__":
     #testNumPyStdVar();
     #testNumPyPercentile();
     testNumPyUniformHist();
+    testNumPyNormalHist();
 
 
 
