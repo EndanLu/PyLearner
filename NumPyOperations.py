@@ -2,6 +2,7 @@
 
 import numpy as np
 from numpy import random
+from scipy import stats
 
 def testNumPyBase():
     print("NumPy Version: " + np.__version__)
@@ -319,3 +320,7 @@ def testNumPyMathBasic():
 
     speed_median = np.median(speed)
     print(speed_median)
+
+    speed = [99, 86, 87, 88, 111, 86, 103, 87, 94, 78, 77, 85, 86]
+    x = stats.mode(speed, keepdims=False)        # In new version of scipy, need to set keepdims parameter.
+    print(x)
