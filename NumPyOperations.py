@@ -343,9 +343,9 @@ def testNumPyPercentile():
     print(x)
 
 def testNumPyUniformHist():
-    x = np.random.uniform(0.0, 5.0, 250)
+    x = np.random.uniform(0.0, 255.0, 500)    # 500个浮点随机数
     print(x)
 
-    plt.hist(x, 5)
+    plt.hist(x, 50)                           # 直方图
     plt.show()
 
