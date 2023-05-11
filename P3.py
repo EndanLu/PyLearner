@@ -81,7 +81,8 @@ if __name__ == "__main__":
     #testNumPyPercentile();
     #testNumPyUniformHist();
     #testNumPyNormalHist();
-    testNumPyScatter();
+    #testNumPyScatter();
+    testSciPyLinRegress();
 
 
 
