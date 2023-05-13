@@ -395,12 +395,16 @@ def testNumPyPolyfit():
     mymodel = np.poly1d(np.polyfit(x, y, 3))    # 先用polyfit做曲线拟合，3表示拟合程度。
                                                 # 再用poly1d生成多项式模型。
                                                 # 比如Poly1d(1, 2, 3), 对应的多项式是 y = square(x)+2x+3.
+
+    print(r2_score(y, mymodel(x)))              # R-Squared值，范围0~1。0表示不拟合，1表示100%拟合。
     print(np.poly1d(mymodel))                   # 打印拟合后的多项式模型。
-    print(r2_score(y, mymodel(x)))              # R-Squared值，范围0~1。0表示不相关，1表示100%相关。
 
     myline = np.linspace(1, 22, 100)            # 定义X轴范围
-
     plt.scatter(x, y)                           # 绘制散点
     plt.plot(myline, mymodel(myline))           # 绘制多项式回归曲线
     plt.title('Y = ' + str(mymodel))
     plt.show()                                  # 显示图，在同一张图上显示散点和多项式回归直线。
+
+    # 用拟合好的模型，预测某个X对应的Y。
+    speed = mymodel(17)
+    print(speed)
