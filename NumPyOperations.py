@@ -4,6 +4,7 @@ import numpy as np
 from numpy import random
 from scipy import stats
 import matplotlib.pyplot as plt
+from sklearn.metrics import r2_score
 
 def testNumPyBase():
     print("NumPy Version: " + np.__version__)
@@ -395,6 +396,7 @@ def testNumPyPolyfit():
                                                 # 再用poly1d生成多项式模型。
                                                 # 比如Poly1d(1, 2, 3), 对应的多项式是 y = square(x)+2x+3.
     print(np.poly1d(mymodel))                   # 打印拟合后的多项式模型。
+    print(r2_score(y, mymodel(x)))              # R-Squared值，范围0~1。0表示不相关，1表示100%相关。
 
     myline = np.linspace(1, 22, 100)            # 定义X轴范围
 
