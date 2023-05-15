@@ -11,6 +11,7 @@ from CPerson import *
 from CStudent import *
 from FileOperation import *
 from NumPyOperations import *
+from PandasOperations import *
 
 
 if __name__ == "__main__":
@@ -84,6 +85,7 @@ if __name__ == "__main__":
     #testNumPyScatter();
     testSciPyLinRegress();
     testNumPyPolyfit();
+    testPandasLinearRegression();
 
 
 
