@@ -12,7 +12,10 @@ def testPandasLinearRegression():
     regr = linear_model.LinearRegression()
     regr.fit(X.values, y.values)
 
-    # predict the CO2 emission of a car where the weight is 2300g, and the volume is 1300ccm:
+    # 打印重量相对于 CO2 的系数值，以及体积相对于 CO2 的系数值。
+    print(regr.coef_)
+
+    # 预测重量为 2300kg、排量为 1300ccm 的汽车的二氧化碳排放量：
     predictedCO2 = regr.predict([[2300, 1300]])
     print(predictedCO2)
 
