@@ -50,3 +50,5 @@ def enjoyChatGPT(pmpt):
         stop=None)
 
     print(response)
+    print('*************************************************************************************')
+    print(response["choices"][0]["message"]["content"])
