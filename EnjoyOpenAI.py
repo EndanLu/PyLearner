@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
 from skimage import io
 
-def genDallEImage(pmpt, size):
+def genImageFromDallE(pmpt, size):
     openai.api_type = "azure"
     openai.api_base = "https://gpt-cdp-01.openai.azure.com/"
     openai.api_version = "2023-06-01-preview"
