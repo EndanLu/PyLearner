@@ -84,9 +84,12 @@ if __name__ == "__main__":
     #testNumPyUniformHist();
     #testNumPyNormalHist();
     #testNumPyScatter();
-    testSciPyLinRegress();
-    testNumPyPolyfit();
-    testPandasLinearRegression();
+
+
+    #testSciPyLinRegress();
+    #testNumPyPolyfit();
+    #testPandasLinearRegression();
+
     genDallEImage('A lovely puppy');
 
 
