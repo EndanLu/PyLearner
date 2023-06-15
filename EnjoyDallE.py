@@ -9,7 +9,7 @@ def genDallEImage(pmpt):
     openai.api_base = "https://gpt-cdp-01.openai.azure.com/"
     openai.api_version = "2023-06-01-preview"
     #openai.api_key = os.getenv("OPENAI_API_KEY")
-    openai.api_key = "ace2c45f24ae4046a40afa139c6fd1cb"
+    openai.api_key = "ace2c45f24ae4046a40afa139c6fd1cb"     # Copied from Azure OpenAI Studio
 
     response = openai.Image.create(
         prompt=pmpt,
