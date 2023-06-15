@@ -91,7 +91,7 @@ if __name__ == "__main__":
     #testPandasLinearRegression();
 
 
-    genDallEImage('A girl standing with a lovely puppy');
+    genDallEImage('A girl standing with a lovely puppy','512x512');
     enjoyChatGPT('How about the weather in Shanghai?');
 
 
