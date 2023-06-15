@@ -12,7 +12,7 @@ from CStudent import *
 from FileOperation import *
 from NumPyOperations import *
 from PandasOperations import *
-from EnjoyDallE import *
+from EnjoyOpenAI import *
 
 
 if __name__ == "__main__":
