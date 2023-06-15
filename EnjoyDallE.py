@@ -24,15 +24,8 @@ def genDallEImage(pmpt):
     print(image_url)
 
     #img = mpimg.imread("/Users/DLU/Downloads/MicrosoftTeams-image.png")
-    #plt.imshow(img)  ##相当于对图像进行了处理，但不能显示，需要配合plt.show()
-    #plt.axis('off')  ##没有这一步最后的图像会有坐标轴
-    #plt.show()
-
-    #image = io.imread(image_url)
-    #io.imshow(image)
-    #io.show()
-
     image = io.imread(image_url)
     plt.imshow(image)
     plt.axis('off')
+    plt.title(pmpt)
     plt.show()

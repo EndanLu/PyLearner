@@ -90,7 +90,8 @@ if __name__ == "__main__":
     #testNumPyPolyfit();
     #testPandasLinearRegression();
 
-    genDallEImage('A lovely puppy');
+
+    genDallEImage('A girl standing with a lovely puppy');
 
 
 
