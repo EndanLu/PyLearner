@@ -92,6 +92,7 @@ if __name__ == "__main__":
 
 
     genDallEImage('A girl standing with a lovely puppy');
+    enjoyChatGPT('How about the weather in Shanghai?');
 
 
 

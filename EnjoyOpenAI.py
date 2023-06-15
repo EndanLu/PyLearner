@@ -29,3 +29,24 @@ def genDallEImage(pmpt):
     plt.axis('off')
     plt.title(pmpt)
     plt.show()
+
+
+def enjoyChatGPT(pmpt):
+    openai.api_type = "azure"
+    openai.api_base = "https://gpt-cdp-01.openai.azure.com/"
+    openai.api_version = "2023-03-15-preview"
+    #openai.api_key = os.getenv("OPENAI_API_KEY")
+    openai.api_key = "ace2c45f24ae4046a40afa139c6fd1cb"  # Copied from Azure OpenAI Studio
+
+    response = openai.ChatCompletion.create(
+        engine="GPT35-CDP",
+        messages=[{"role": "system", "content": "You are an AI assistant that helps people find information."},
+                  {"role": "user", "content": pmpt}],
+        temperature=0.7,
+        max_tokens=800,
+        top_p=0.95,
+        frequency_penalty=0,
+        presence_penalty=0,
+        stop=None)
+
+    print(response)
