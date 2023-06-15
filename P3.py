@@ -12,6 +12,7 @@ from CStudent import *
 from FileOperation import *
 from NumPyOperations import *
 from PandasOperations import *
+from EnjoyDallE import *
 
 
 if __name__ == "__main__":
@@ -86,6 +87,7 @@ if __name__ == "__main__":
     testSciPyLinRegress();
     testNumPyPolyfit();
     testPandasLinearRegression();
+    genDallEImage('A lovely puppy');
 
 
 
