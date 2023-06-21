@@ -13,6 +13,7 @@ from FileOperation import *
 from NumPyOperations import *
 from PandasOperations import *
 from EnjoyOpenAI import *
+from TryWhisperTool import *
 
 
 if __name__ == "__main__":
@@ -90,9 +91,11 @@ if __name__ == "__main__":
     #testNumPyPolyfit();
     #testPandasLinearRegression();
 
+    #genImageFromDallE('A cute baby with a lovely puppy.', '512x512');
+    #enjoyChatGPT('How about the weather in Shanghai?');
 
-    genImageFromDallE('A girl standing with a lovely puppy', '512x512');
-    enjoyChatGPT('How about the weather in Shanghai?');
+    count_letter('aaabbbbcccd')
+    test_count_letter()
 
 
 
