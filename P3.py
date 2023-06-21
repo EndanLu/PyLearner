@@ -97,6 +97,11 @@ if __name__ == "__main__":
     count_letter('aaabbbbcccd')
     test_count_letter()
 
+    check_phone('18516157327')
+    check_phone('185161573279')
+    check_phone('18516157327a')
+    test_check_phone()
+
 
 
 
