@@ -91,7 +91,7 @@ if __name__ == "__main__":
     #testNumPyPolyfit();
     #testPandasLinearRegression();
 
-    #genImageFromDallE('A cute baby with a lovely puppy.', '512x512');
+    genImageFromDallE('A cute baby with a lovely puppy.', '512x512');
     #enjoyChatGPT('How about the weather in Shanghai?');
 
     count_letter('aaabbbbcccd')
