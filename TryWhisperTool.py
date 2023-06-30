@@ -33,7 +33,7 @@ def test_check_phone():
     assert (check_phone('1380013') == False)
     print('check_phone检毕通过')
 
-# 创建一个简单的UI界面，让用户进行手朷号码的校驗。
+# 创建一个简单的UI界面，让用户进行手机号码的校驗。
 def check_phone_ui():
     phone = input('Please input your phone number: ')
     if check_phone(phone):
