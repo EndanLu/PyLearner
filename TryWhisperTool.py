@@ -33,16 +33,6 @@ def test_check_phone():
     assert (check_phone('1380013') == False)
     print('check_phone检毕通过')
 
-# 创建一个简单的UI界面，让用户进行手机号码的校驗。
-def check_phone_ui():
-    phone = input('Please input your phone number: ')
-    if check_phone(phone):
-        print('Your phone number is correct.')
-        return True
-    else:
-        print('Your phone number is incorrect.')
-        return False
-    # return check_phone(phone)
 
 # 创建一个类，用于操作MySQL数据库，对表的字段进行增删改查。
 class MySQLHelper:

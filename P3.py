@@ -89,11 +89,12 @@ if __name__ == "__main__":
 
     #testSciPyLinRegress();
     #testNumPyPolyfit();
-    #testPandasLinearRegression();
+    testPandasLinearRegression();
 
     genImageFromDallE('A cute baby with a lovely puppy.', '512x512');
     #enjoyChatGPT('How about the weather in Shanghai?');
 
+    # Use CodeWhisper tool
     count_letter('aaabbbbcccd')
     test_count_letter()
 
