@@ -86,3 +86,16 @@ def test_MySQLHelper():
     helper.update('user', name='小明', age=19)
     helper.delete('user', name='小明')
     helper.close()
+
+# 使用python检索数组中的最大值和最小值
+def find_max_min(arr):
+    max_num = max(arr)
+    min_num = min(arr)
+    return max_num, min_num
+
+# 为find_max_min函数添加单元测试代码
+def test_find_max_min():
+    arr = [1, 2, 3, 4, 5]
+    max_num, min_num = find_max_min(arr)
+    assert (max_num == 5 and min_num == 1)
+    print('find_max_min检测通过')
