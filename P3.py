@@ -14,6 +14,7 @@ from NumPyOperations import *
 from PandasOperations import *
 from EnjoyOpenAI import *
 from TryWhisperTool import *
+from TryBTYD import *
 
 
 if __name__ == "__main__":
@@ -102,6 +103,10 @@ if __name__ == "__main__":
     check_phone('185161573279')
     check_phone('18516157327a')
     test_check_phone()
+
+    helloBTYD()
+
+
 
 
 

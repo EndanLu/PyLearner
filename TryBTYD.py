@@ -10,4 +10,12 @@
 # https://www.kaggle.com/code/mursideyarkin/buy-till-you-die-models-customer-lifetime-value/notebook
 
 
+from btyd.datasets import load_cdnow_summary
+
+
+def helloBTYD():
+    data = load_cdnow_summary(index_col=[0])
+    print(data.head())
+
+
 
