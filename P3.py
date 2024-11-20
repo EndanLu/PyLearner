@@ -15,6 +15,8 @@ from PandasOperations import *
 from EnjoyOpenAI import *
 from TryWhisperTool import *
 from TryBTYD import *
+import requests
+#from bs4 import BeautifulSoup
 
 
 if __name__ == "__main__":
@@ -92,7 +94,7 @@ if __name__ == "__main__":
     #testNumPyPolyfit();
     testPandasLinearRegression();
 
-    genImageFromDallE('A cute baby with a lovely puppy.', '512x512');
+    #genImageFromDallE('A cute baby with a lovely puppy.', '512x512');
     #enjoyChatGPT('How about the weather in Shanghai?');
 
     # Use CodeWhisper tool
@@ -106,6 +108,12 @@ if __name__ == "__main__":
 
     helloBTYD()
     # Diagram()
+
+    url = "https://digital.vfc.com/wiki/display/DPMA/Jira+ticket+size+mapping"
+    html_str = requests.get(url);
+    print(html_str)
+
+    print(html_str.text)
 
 
 
